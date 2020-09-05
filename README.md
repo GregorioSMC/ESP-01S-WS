@@ -22,8 +22,8 @@
 
 ![GitHub Logo](/Diseño/ESP-01S-WS/Img/Capturas/WS/02.JPG)
 
-Nota: Para mayor referencia consulte la carpeta "data" donde se encuentre el script referente a dicha pagina web
-[Data](/Codigo/WS-ESP-01S/data)
+Nota: Para mayor referencia consulte la carpeta "[data](/Codigo/WS-ESP-01S/data)" donde se encuentre el script referente a dicha pagina web
+
 
 
 ![GitHub Logo](/Diseño/ESP-01S-WS/Img/Capturas/01.jpeg)
