@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control</title>
+</head>
+<body class="container">    
+
+    <div class="alert">
+        <div class="alert alert-info">
+            <center><H2>Instituto Tecnologico Superior de San Martin Texmelucan</H2></center>
+            <hr>
+        </div>
+
+        <div class="alert alert-info">
+            <center><canvas id="myCanvas" width="350" height="350" style="border:1px solid #d3d3d3;"> Tu navegador no soporta el elemento CANVAS de HTML5.</canvas></center>
+            <script>
+                var connection = new WebSocket('ws://'+location.hostname+':81/', ['arduino']); /*Crea un WebSocket conectándose con el servidor
+                                                                                       ws://[IP del servidor]:81/ con el protocolo
+                                                                                       de 'arduino'*/
+                connection.onopen = function () {                                              //Al abrir la conexión...
+                    connection.send('Conectado  -  ' + new Date());                              //...envía 'Conectado' + fecha y hora al servidor
+                    console.log('Conectado  -  ' + new Date());                                  //...envía 'Conectado' + fecha y hora a la consola
+                }
+                connection.onmessage = function (event) {                                      //Al recibir un msg...(voltaje leído por ESP8266)
+                    console.log('Servidor (recibe): ', event.data);                              //...envía 'Serv. (recibe):'+ mensaje a la consola
+                    verValor();                                                                  //...ejecuta la función verValor()
+                }
+                connection.onerror = function (error) {                                        //Si hay un error en la conexión...
+                    console.log('WebSocket Error!!!', error);                                    //...envía 'WS Error!!!'+tipo de error a la consola
+                }
+                function verValor() {                                                          //Declara la función verValor() Cuando se ejecuta:
+                    var valor = event.data;                                                      //Asigna a la variable local valor el msg.recibido
+                    var c = document.getElementById('myCanvas');                                 //Crea el nodo DOM para el elemento c (canvas)
+                    var ctx = c.getContext('2d');                                                //Establece el contexto de representación (2D)
+                    ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);                        //Limpia el canvas (para evitar superposiciones)
+                    ctx.beginPath();                                                             //Comienza un nuevo trazado (una parte del dibujo)
+                    ctx.lineWidth = 40;                                                          //Anchura de los trazos: 40 pixels
+                    ctx.strokeStyle = '#EEEEEE';                                                 //Color de los trazos: gris claro
+                    ctx.arc(175,175,100,0.75*Math.PI,0.25*Math.PI);                              /*Trazo: arco con centro (175,175), radio 100px
+                                                                                                y ángulo de giro entre 0.75π y 0.25π rad*/
+                    ctx.stroke();                                                                //Representa en pantalla el trazado
+                    ctx.beginPath();                                                             //Comienza un nuevo trazado
+                    ctx.strokeStyle = '#87CEEB';                                                 //Color de los trazos: azul cielo (sky blue)
+                    ctx.arc(175,175,100,(0.25-(1/50)*valor)*Math.PI,0.25*Math.PI);            /*Trazo: arco con centro (175,175), radio 100px
+                                                                                                y ángulo de giro proporcional al voltaje medido
+                                                                                                3.3V serán 1.5π rad.El arco termina en 0.25π rad*/
+                    ctx.stroke();                                                                //Representa en pantalla el trazado
+                    ctx.font = 'bold 40px Arial';                                                //Fuente de texto: arial, 40 px negrilla
+                    ctx.fillStyle = '#87CEEB';                                                   //Color de texto: azul cielo
+                    ctx.textAlign = 'center';                                                    //Posición de texto: centrado
+                    ctx.fillText(valor+"°C",175, 185);                                            //Texto a representar: mensaje+V. Centro (175,185)
+                }
+            </script>
+            <center> <h1> Temperatura </h1> </center>
+        </div>
+        <div class ="alert alert-info">  
+            <hr>
+            <center><H4>Realizo: Gregorio San Martin Crisostomo</H4></center>
+        </div>
+    </div>
+    
+</body>
+</html>
