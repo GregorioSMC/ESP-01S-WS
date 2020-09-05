@@ -20,6 +20,9 @@
 
 <p>Como se puede observar en la consola el código JS realiza una consulta asíncrona hacia el microcontrolador el cual está configurado para enviar una supuesta desde el sensor cada 100 milisegundos.</p>
 
+Nota: Para mayor referencia consulte la carpeta "data" donde se encuentre el script referente a dicha pagina web
+[Data](/Codigo/data)
+
 ![GitHub Logo](/Diseño/ESP-01S-WS/Img/Capturas/WS/02.JPG)
 
 ![GitHub Logo](/Diseño/ESP-01S-WS/Img/Capturas/01.jpeg)
