@@ -31,7 +31,7 @@ Nota: Para mayor referencia consulte la carpeta "[data](/Codigo/WS-ESP-01S/data/
 
 # Diseño
 
-<p> Se anexan los diseños realizados en el software Altium para la fabricación de la [PCB](/Diseño/ESP-01S-WS/). </p>
+Se anexan los diseños realizados en el software Altium para la fabricación de la [PCB.](/Diseño/ESP-01S-WS)
 
 ![GitHub Logo](/Diseño/ESP-01S-WS/Img/Capturas/01.jpeg)
 
