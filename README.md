@@ -1,7 +1,11 @@
 # ESP-01S-WS
 
+<hr>
+
 * SoC ESP-01S
 * Implementación WebSocket
+
+<hr>
 
 - [x] HTML
 - [x] JavaScript
@@ -9,6 +13,13 @@
 - [x] DashBoard Local
 - [ ] DashBoard Externo
 - [ ] Conexión Base de datos
+
+<hr>
+
+<p>Se ha desarrollado mediante HTML y JS una interfaz gráfica para visualizar los valores recopilados por el sensor DHT-11, los cuales son procesados, interpretados y enviados mediante Wi-Fi para su posterior consulta.</p>
+
+![GitHub Logo](/Diseño/ESP-01S-WS/Img/Capturas/WS/01.JPG)
+
 
 ![GitHub Logo](/Diseño/ESP-01S-WS/Img/Capturas/01.jpeg)
 
