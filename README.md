@@ -1,7 +1,5 @@
 # ESP-01S-WS
 
-<hr>
-
 * SoC ESP-01S
 * Implementación WebSocket
 
@@ -20,6 +18,9 @@
 
 ![GitHub Logo](/Diseño/ESP-01S-WS/Img/Capturas/WS/01.JPG)
 
+<p>Como se puede observar en la consola el código JS realiza una consulta asíncrona hacia el microcontrolador el cual está configurado para enviar una supuesta desde el sensor cada 100 milisegundos.</p>
+
+![GitHub Logo](/Diseño/ESP-01S-WS/Img/Capturas/WS/02.JPG)
 
 ![GitHub Logo](/Diseño/ESP-01S-WS/Img/Capturas/01.jpeg)
 
