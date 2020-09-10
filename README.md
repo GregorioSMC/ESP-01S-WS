@@ -4,7 +4,7 @@
     </div>    
     <div>
         <H1>Avances</H1>
-        <pre>
+        <pre style = "color:write">
             [x] HTML
             [x] JavaScript
             [x] Diseño PCB (Altium)
