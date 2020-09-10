@@ -2,10 +2,17 @@
     <div>
         <H1>ESP-01S-WS</H1>
     </div>    
-    <hr>
     <div>
-        <img src="https://github.com/GregorioSMC/ESP-01S-WS/blob/master/Dise%C3%B1o/ESP-01S-WS/Img/Capturas/01.jpeg" alt="Imagen 1">        
-        <img src="Diseño/ESP-01S-WS/Img/Capturas/02.jpeg" alt="Imagen 2">      
+        <H1>Avances</H1>
+        - [x] HTML
+        - [x] JavaScript
+        - [x] Diseño PCB (Altium)
+        - [x] DashBoard Local
+        - [ ] DashBoard Externo
+        - [ ] Conexión Base de datos
+    </div>    
+    <div>
+        <img src="Diseño/ESP-01S-WS/Img/Capturas/01.jpeg" alt="Modelo 3D ESP-01-WS V1.0 Imagen 1">        
+        <img src="Diseño/ESP-01S-WS/Img/Capturas/02.jpeg" alt="Modelo 3D ESP-01-WS V1.0 Imagen 2">      
     </div>
-
 </div>
